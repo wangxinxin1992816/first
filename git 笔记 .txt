@@ -1,0 +1,52 @@
+git 分布式管理
+	每一个人的电脑上都是一台服务器
+	在没有网络的环境下可以做提交
+	因为 git 先提交到本地
+	在推送给服务器
+
+svn 集中式管理
+	每一个人的电脑上只是克隆了一个版本
+	没有网络的情况下无法提交
+	提交是直接提交到服务器，没有本地这一环节
+
+
+git 
+
+	出现编辑页面时（在使用 pull 或者 push 命令时容易遇到）
+	shift + 分号 
+	在输入 q
+	回车
+
+git add   将修改的文件添加到本地环境
+git add . 将所有修改的文件加入到本地环境
+git status 查看当前项目状态
+git commit 将当前修改的文件提交到本地环境
+`	   -am 将所有文件全部提交到本地 并写上注释说明 
+git push  将当前项目上传到服务器，与服务器保持一致
+	git push origin master 将本地代码推送到远程服务器的 master 分支上
+git pull  从服务器上把项目拉下来(获取服务器最新代码)
+
+	git pull origin master 从远端 master 分支上获取最新的代码到本地环境
+
+在使用 git pull 的情况下容易遇到代码合并时 产生新的文件修改，
+这个时候 在执行 提交流程 add , commit push 
+
+
+
+git log 查看日志 (查看的是 commit 日志)
+git reset --hard [commit id]  回退到历史版本，只是本地项目回退
+	commit id 通过 git log 获取
+
+
+git branch 查看当前分支
+git branch 分支名 创建分支（在当前分支的基础上复制了一份代码）
+git checkout 分支名  切换分支
+
+git merge [branch]
+	假如 master 想合并 devleop
+	先切换到 master 分支
+	使用 git merge devleop  把 develop 的代码和 master 做合并
+
+
+echo "内容" >> a.txt  利用 echo 可以输出一个日志到文本来创建一个新的文件
+
