@@ -1,0 +1,111 @@
+node   
+    js 通常只能浏览器上运行
+    因为这个限制前端工程师只能 写页面，写 特效
+    在浏览器上
+        没有办法读写文件 ( IO )
+        没有办法链接数据库 ( DB )
+        没有办法做服务器 ( network )
+
+    node 出现就全部改变了
+        IO
+        network
+        让 js 运行在服务器上
+
+npm
+    包管理
+    node package module
+
+
+    init
+    初始化项目信息
+    完成后会生成一个 pakeage.json
+
+anywhere 静态服务器 
+
+安装模块
+    npm install -g anywhere 
+    npm 包管理命令
+    install 安装
+    -g 全局
+    anywhere 模块名
+
+全局常用服务器模块
+npm install --global anywhere
+npm install --global gulp
+
+
+局部安装
+npm install gulp --save
+npm install gulp-ruby-sass --save
+css 压缩
+npm install gulp-minify-css --save
+文件合并
+npm install gulp-concat --save
+js 文件压缩
+npm install gulp-uglify --save
+重命名
+npm install gulp-rename --save
+后编译
+npm install gulp-rename --save
+css 属性前缀
+npm install autoprefixer --save
+后编译模块压缩 处理 css
+npm install cssnano --save
+
+
+
+gulp
+    前端工程化的一种工具
+
+    task 定义任务事件
+    watch 监听文件
+
+gulp-ruby-sass  gulp插件 调用系统 ruby 环境编译 sass
+需要在本地安装 ruby
+修改包管理地址 为
+     gem source -a http://gems.ruby-china.org
+      查看安装包源地址
+     gem source -l
+
+     gem install sass 安装 sass 摸快
+     gem list 查看本地摸快
+
+
+
+安装 
+node.js   为了 js 可以在  后台运行
+gulp   
+    安装全局环境 gulp : npm install -g gulp
+
+ruby  安装ruby
+    修改安装的源地址
+    gem source -a http://gems.ruby-china.org
+    gem source -l  查看本地访问安装包源的地址
+    gem install sass  安装 ruby 环境下的 sass
+
+创建一个项目
+
+    初始化项目  npm init  这个命令只需要执行 一次
+    会生成 pageage.json 文件   这个是描述项目信息
+
+
+在项目中安装依赖模块
+    局部环境的 gulp
+    npm install gulp --save
+    安装 ruby-sass
+    npm install gulp-ruby-sass --save
+        它会调用系统中的 sass 服务
+    css 压缩
+    npm install gulp-minify-css --save
+    文件合并
+    npm install gulp-concat --save
+    js 文件压缩
+    npm install gulp-uglify --save
+    重命名
+    npm install gulp-rename --save
+    后编译
+    npm install gulp-postcss --save
+    css 属性前缀
+    npm install autoprefixer --save
+    后编译模块压缩 处理 css
+    npm install cssnano --save
